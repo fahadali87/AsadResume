@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Asad Gulraiz · Trade & Business Manager | Japan-Philippines Operations</title>
+  <!-- Modern HTML5 + CSS3 Resume for Business Manager (Japan Surplus / Philippines Trade) -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #eef2f5;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.5;
+      color: #1f2d3a;
+      padding: 2rem 1.2rem;
+    }
+
+    /* main container — card style */
+    .resume-card {
+      max-width: 1100px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 28px;
+      box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      transition: all 0.2s;
+    }
+
+    /* header: modern gradient + clean */
+    .header-modern {
+      background: linear-gradient(135deg, #0b2b3b 0%, #1a4b5f 100%);
+      color: white;
+      padding: 2.2rem 2.8rem 1.8rem 2.8rem;
+    }
+
+    .name-title h1 {
+      font-size: 3rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 0.3rem;
+    }
+
+    .current-role {
+      font-size: 1.4rem;
+      font-weight: 450;
+      opacity: 0.92;
+      border-left: 4px solid #f3b33d;
+      padding-left: 1rem;
+      margin: 0.6rem 0 0.9rem 0;
+    }
+
+    .tagline {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      margin-top: 1rem;
+    }
+
+    .tagline span {
+      background: rgba(255,255,255,0.12);
+      backdrop-filter: blur(2px);
+      padding: 0.25rem 1.2rem;
+      border-radius: 40px;
+      font-size: 0.85rem;
+      font-weight: 450;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    /* contact bar */
+    .contact-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem 2.5rem;
+      background: #f0f5f9;
+      padding: 1rem 2.8rem;
+      color: #1e4a5f;
+      font-weight: 500;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    /* 2 column layout */
+    .two-columns {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .left-panel {
+      flex: 1.2 1 290px;
+      background: #fbfdfe;
+      border-right: 1px solid #e9edf2;
+      padding: 2rem 1.8rem 2rem 2.2rem;
+    }
+
+    .right-panel {
+      flex: 2.3 1 480px;
+      padding: 2rem 2.2rem 2rem 1.8rem;
+    }
+
+    /* section titles */
+    .section-title {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #1c5d74;
+      border-bottom: 3px solid #f3b33d;
+      padding-bottom: 0.4rem;
+      margin: 1.6rem 0 1rem 0;
+      display: inline-block;
+    }
+    .left-panel .section-title:first-of-type {
+      margin-top: 0;
+    }
+
+    /* skills + tags */
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 0.7rem 0 1rem;
+    }
+    .skill-tag {
+      background: #e7edf3;
+      color: #1e4a5f;
+      padding: 0.3rem 1rem;
+      border-radius: 40px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+    .skill-tag.highlight {
+      background: #1c5d74;
+      color: white;
+    }
+
+    /* languages + education items */
+    .info-line {
+      display: flex;
+      justify-content: space-between;
+      margin: 0.5rem 0;
+      font-size: 0.9rem;
+      border-bottom: 1px dashed #dee4ea;
+      padding-bottom: 0.4rem;
+    }
+    .info-label {
+      font-weight: 600;
+      color: #1f3b48;
+    }
+
+    /* about me compact */
+    .about-text {
+      background: #f9fbfd;
+      padding: 1rem;
+      border-radius: 16px;
+      font-size: 0.9rem;
+      margin: 1rem 0;
+      border-left: 4px solid #f3b33d;
+      color: #2f4858;
+    }
+
+    /* experience cards */
+    .exp-item {
+      margin-bottom: 1.8rem;
+    }
+    .exp-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 0.5rem 1rem;
+      margin-bottom: 0.2rem;
+    }
+    .exp-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #0c3f51;
+    }
+    .exp-company {
+      font-weight: 500;
+      color: #f3b33d;
+      background: #fff6e8;
+      padding: 0.1rem 0.6rem;
+      border-radius: 40px;
+      font-size: 0.8rem;
+    }
+    .exp-date {
+      font-size: 0.75rem;
+      color: #6f8f9c;
+      margin-left: auto;
+      background: #eff3f6;
+      padding: 0.2rem 0.8rem;
+      border-radius: 40px;
+    }
+    .exp-desc {
+      color: #2f4a5c;
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+      padding-left: 0.5rem;
+      border-left: 3px solid #f3b33d;
+    }
+
+    /* highlight for current role */
+    .current-highlight {
+      background: #eef6f0;
+      border-left: 4px solid #f3b33d;
+      padding: 0.6rem 1rem;
+      border-radius: 14px;
+      margin: 1rem 0;
+    }
+
+    hr {
+      margin: 1rem 0;
+      border: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #cbdbe0, transparent);
+    }
+
+    /* responsiveness */
+    @media (max-width: 750px) {
+      .header-modern { padding: 1.5rem; }
+      .contact-bar { padding: 0.8rem 1.5rem; }
+      .left-panel, .right-panel { padding: 1.5rem; }
+      .name-title h1 { font-size: 2.2rem; }
+    }
+
+    @media print {
+      body {
+        background: white;
+        padding: 0.2in;
+      }
+      .resume-card {
+        box-shadow: none;
+        border: 1px solid #ccc;
+      }
+      .skill-tag, .exp-company, .tagline span {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="resume-card">
+  <!-- HEADER section with current Japan-Philippines role -->
+  <div class="header-modern">
+    <div class="name-title">
+      <h1>Syed Asad Gulraiz</h1>
+      <div class="current-role">Business Manager – Japan Surplus Trading · Philippines Operations</div>
+    </div>
+    <div class="tagline">
+      <span>📦 Japan → Cebu · Manila · Davao · Subic · Cagayan</span>
+      <span>📑 Customs & Shipping Docs</span>
+      <span>🚢 Logistics Management</span>
+      <span>🤝 Trade Negotiation</span>
+    </div>
+  </div>
+
+  <!-- contact row -->
+  <div class="contact-bar">
+    <span>📞 +92 333 4302943</span>
+    <span>✉️ asadgulraiz2@gmail.com</span>
+    <span>📍 Lahore, Pakistan / Philippines Coordination</span>
+    <span>🌐 Japan Surplus Trading CORP</span>
+  </div>
+
+  <!-- two columns -->
+  <div class="two-columns">
+    <!-- LEFT COLUMN: education, skills, languages, about, business background -->
+    <div class="left-panel">
+      <!-- Education -->
+      <div class="section-title">📖 Education</div>
+      <div class="info-line"><span class="info-label">Bachelor of Arts</span><span>University of Punjab (2004-2006)</span></div>
+      <div class="info-line"><span class="info-label">Intermediate of Commerce</span><span>Punjab College of Commerce (1996-1998)</span></div>
+      <div class="info-line"><span class="info-label">High School (Science)</span><span>Radiant Way School (1996)</span></div>
+
+      <!-- Core Competencies (Trade focus) -->
+      <div class="section-title">🌏 Trade & Management</div>
+      <div class="skill-tags">
+        <span class="skill-tag highlight">Shipment Coordination</span>
+        <span class="skill-tag highlight">Customs Brokerage</span>
+        <span class="skill-tag">Japan-Philippines Logistics</span>
+        <span class="skill-tag">Import Documentation</span>
+        <span class="skill-tag">Port Operations (CEBU, MNL, DVO)</span>
+        <span class="skill-tag">Supplier Negotiation</span>
+        <span class="skill-tag">Inventory & Supply Chain</span>
+      </div>
+
+      <!-- Languages -->
+      <div class="section-title">🗣️ Languages</div>
+      <div class="info-line"><span class="info-label">English</span><span>Fluent (Business)</span></div>
+      <div class="info-line"><span class="info-label">Urdu / Hindi</span><span>Native</span></div>
+      <div class="info-line"><span class="info-label">Punjabi</span><span>Native</span></div>
+
+      <!-- Digital & Technical Skills -->
+      <div class="section-title">🖥️ Tools & Software</div>
+      <div class="skill-tags">
+        <span class="skill-tag">MS Office Suite</span>
+        <span class="skill-tag">Adobe Premiere Pro</span>
+        <span class="skill-tag">Adobe Audition</span>
+        <span class="skill-tag">Videography</span>
+        <span class="skill-tag">ERP basics</span>
+      </div>
+
+      <!-- About / Profile summary -->
+      <div class="section-title">👤 About me</div>
+      <div class="about-text">
+        Versatile trade and business management professional with a passion for operational excellence. 
+        Proven ability to manage cross-border shipments, customs documentation, and multi-port distribution. 
+        Strong work ethic, adaptability, and relationship-building across Japan and Philippines stakeholders.
+      </div>
+    </div>
+
+    <!-- RIGHT COLUMN: experience (current + previous roles) -->
+    <div class="right-panel">
+      <!-- Current Role: ASHIYA Japan Surplus Trading CORP -->
+      <div class="section-title">📌 current assignment</div>
+      <div class="current-highlight">
+        <div class="exp-header">
+          <span class="exp-title">Business Manager – Philippines Operations</span>
+          <span class="exp-company">ASHIYA Japan Surplus Trading CORP</span>
+          <span class="exp-date">2023 – Present</span>
+        </div>
+        <div class="exp-desc" style="border-left-color: #f3b33d; margin-top: 8px;">
+          <strong>📍 Japan → Philippines Trade Hub</strong> — Solely responsible for handling and managing all shipment operations from Japan to major Philippine destinations: Cebu, Manila, Davao, Subic, Cagayan. 
+          Coordinate directly with Japanese suppliers and customs brokers; prepare and verify shipping documents (BL, commercial invoices, packing lists, certificates of origin). 
+          Ensure seamless customs clearance, reduce turnaround time, and maintain end-to-end logistics visibility. 
+          Oversee multi-port distribution and stakeholder communication, resulting in 99% on-time delivery and improved cost efficiency.
+        </div>
+        <div style="margin-top: 10px; display: flex; flex-wrap: wrap; gap: 8px;">
+          <span style="background:#ecf7f0; padding:4px 12px; border-radius:20px; font-size:0.75rem;">📦 Container tracking</span>
+          <span style="background:#ecf7f0; padding:4px 12px; border-radius:20px; font-size:0.75rem;">📑 Customs brokerage liaison</span>
+          <span style="background:#ecf7f0; padding:4px 12px; border-radius:20px; font-size:0.75rem;">⚓ Port logistics</span>
+        </div>
+      </div>
+
+      <!-- Senior Procurement Officer (Al-Shafi Group) -->
+      <div class="section-title">📦 previous leadership</div>
+      <div class="exp-item">
+        <div class="exp-header">
+          <span class="exp-title">Senior Procurement Officer</span>
+          <span class="exp-company">Al-Shafi Group of Industries</span>
+          <span class="exp-date">2019 – 2022</span>
+        </div>
+        <div class="exp-desc">
+          Managed end-to-end procurement: sourcing, bid evaluation, contract negotiation. Achieved cost savings through supplier relationship management and inventory optimization. Collaborated cross-functionally to ensure timely material availability, reduced carrying costs, and improved supplier performance.
+        </div>
+      </div>
+
+      <!-- Territory Sales Manager (Gestetner) + business ownership -->
+      <div class="exp-item">
+        <div class="exp-header">
+          <span class="exp-title">Territory Sales Manager</span>
+          <span class="exp-company">Gestetner (Pvt) Limited · Office Automation</span>
+          <span class="exp-date">2009 – 2013</span>
+        </div>
+        <div class="exp-desc">
+          Led a team of 5 sales reps & 3 technical engineers. Exceeded revenue targets year-over-year, expanded market share, developed strategic sales plans. Cultivated long-term client relationships, executed market research to identify opportunities.
+        </div>
+      </div>
+
+      <!-- Entrepreneur / Zeeshan Zari Business -->
+      <div class="exp-item">
+        <div class="exp-header">
+          <span class="exp-title">Business Owner – Metallic Yarn (Zeeshan Zari)</span>
+          <span class="exp-company">Wholesale & Retail Enterprise</span>
+          <span class="exp-date">2013 – 2019</span>
+        </div>
+        <div class="exp-desc">
+          Founded and managed a thriving metallic yarn business serving textile manufacturers and craft retailers. Oversaw procurement, inventory, sales, and customer relations. Developed strong B2B network and operational strategy.
+        </div>
+      </div>
+
+      <!-- Marketing Executive O&A Business Machines (TOSHIBA) -->
+      <div class="exp-item">
+        <div class="exp-header">
+          <span class="exp-title">Marketing Executive</span>
+          <span class="exp-company">O&A Business Machines (TOSHIBA)</span>
+          <span class="exp-date">2004 – 2009</span>
+        </div>
+        <div class="exp-desc">
+          Executed innovative B2B marketing campaigns, increased brand awareness, lead generation. Collaborated with sales to define target audiences; arranged product demonstrations and market penetration strategies for office automation solutions.
+        </div>
+      </div>
+
+      <!-- Suzuki Motorcycles Pakistan -->
+      <div class="exp-item">
+        <div class="exp-header">
+          <span class="exp-title">Marketing Executive</span>
+          <span class="exp-company">Suzuki Motorcycles Pakistan LTD</span>
+          <span class="exp-date">2002 – 2004</span>
+        </div>
+        <div class="exp-desc">
+          Developed integrated marketing strategies boosting brand visibility and revenue. Leveraged multi-channel campaigns to increase market share, lead generation, and territory expansion.
+        </div>
+      </div>
+
+      <!-- additional note: core competencies highlight -->
+      <hr>
+      <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between; font-size: 0.8rem; color: #3f6b7c;">
+        <span>🏢 Japan-Philippines trade lane expert</span>
+        <span>📄 Customs documentation specialist</span>
+        <span>⚙️ Cross-functional leadership</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer: small references / availability -->
+  <div style="background: #f8fafc; border-top: 1px solid #e2e8f0; padding: 0.8rem 2.5rem; font-size: 0.75rem; color: #5b7f8e; display: flex; flex-wrap: wrap; gap: 1rem;">
+    <span>✅ References available upon request</span>
+    <span>🌏 Fluent in trade documentation & international logistics</span>
+    <span style="margin-left: auto;">📍 Open for Philippines / Japan business expansion</span>
+  </div>
+</div>
+</body>
+</html>
